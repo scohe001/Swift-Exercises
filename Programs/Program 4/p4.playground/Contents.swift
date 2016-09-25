@@ -10,8 +10,9 @@ let abbreviations = [
 var test = "IDK if you like me or my BFF. I'm JK of course, that'd be TMI. TTYL!"
 
 for (acr, expanded) in abbreviations {
-    while let r = test.rangeOfString(acr) {
-        test.replaceRange(r, with: expanded)
+    //func range(of: String, options: String.CompareOptions, range: Range<String.Index>?, locale: Locale?)
+    while let r = test.range(of: acr) {
+        test.replaceSubrange(r, with: expanded)
     }
 }
 
